@@ -93,14 +93,16 @@ const next = document.getElementById("next-ques-button");
 const quizForm = document.getElementById("QuizForm");
 const endForm = document.getElementById("EndForm");
 
-//let currentQuestionIndex = 0;
-
 let questionIdToFind=1;
+let answerIdToFind;                         
 let score = 0;
 let count;
 
+let foundQuestion = Questions.find(question => question.id === questionIdToFind);
+
 function gotoNext() {
     questionIdToFind++;
+    answerIdToFind+4;
  // currentQuestionIndex++;
   if (isCorrect) {
     score++;
@@ -123,8 +125,8 @@ function gotoNext() {
   }
 }
 
-let foundQuestion = Questions.find(question => question.id === questionIdToFind);
 function showQuestion() {
+  //  console.log(answerIdToFind)
   ans.innerHTML = "";
   count = false;
   if (count == false) {
@@ -136,10 +138,13 @@ function showQuestion() {
 //   let currentQuestion = Questions[currentQuestionIndex];
   ques.innerHTML = currentQuestion.question;
 
+ // currentQuestion.answers.forEach((foundAnswer) => {
   currentQuestion.answers.forEach((answer) => {
     const button = document.createElement("button");
-    button.innerHTML = answer.text;
-    button.classList.add("btn");              
+     button.innerHTML = answer.text;
+   // button.innerHTML = foundAnswer.text;
+    button.classList.add("btn");
+    button.id = answer.id +"";                                          
     ans.appendChild(button);
   });
 }
@@ -153,11 +158,17 @@ function selectAnswer() {
 
   selectedButton = event.target;
   selectedButton.classList.add("selected");
-  isCorrect = foundQuestion.answers.find(
+  //isCorrect = foundQuestion.answers.find(
  // isCorrect = Questions[currentQuestionIndex].answers.find(
-    (answer) => answer.text === selectedButton.innerHTML
-  ).correct;
+   // (answer) => answer.text === selectedButton.innerHTML                      
+   // (answer) => answer.id=== selectedButton.id                        
+    //(foundAnswer) => foundAnswer.text === selectedButton.innerHTML
+ // ).correct;
 
+ isCorrect = foundQuestion.answers.find((answer) => {
+    return answer.id+"" === selectedButton.id; 
+    }  ).correct;
+    console.log(selectedButton.id);
   count = true;
   if (count == true) {
    // next.style.display = "inline";
