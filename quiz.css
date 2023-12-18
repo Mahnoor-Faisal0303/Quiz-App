@@ -95,11 +95,6 @@ h2{
 .correct{
     background: green;
 }
-.incorrect{
-    background: black;
-}
-
-
 .displayNone {
     display: none;
   }

@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <link rel="stylesheet" href="quiz.css">
-    
-</head>
-<body>
-<div class="wrapper">
-    <form id="StartForm">
-            <h1>Quiz App</h1>
-        <br>
-        <button id="start_button" type="submit" class="start-button" onclick="showQuestion()">START</button>
-    </form>
+    <link rel="stylesheet" href="quiz.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form id="StartForm">
+        <h1>Quiz App</h1>
+        <br />
+        <button
+          id="start_button"
+          type="submit"
+          class="start-button"
+          onclick="showQuestion()"
+        >
+          START
+        </button>
+      </form>
 
+      <form id="QuizForm" style="display: none">
+        <h1>Questions</h1>
+        <br />
+        <p id="questions"></p>
+        <br />
 
+        <div id="answer-btn" onclick="selectAnswer()">
+        </div>
+        <button id="next-ques-button" class="start-button" onclick="gotoNext()">
+          Next
+        </button>
+      </form>
 
-    <form id="QuizForm" style="display: none;">
-      <h1>Questions</h1><br>
-      <p id="questions"></p><br>
+      <form id="EndForm" style="display: none">
+        <h1>Quiz App</h1>
+        <br />
+        <h2>Total Marks:5</h2>
+        <br />
 
-      
-      <div id="answer-btn" onclick="selectAnswer()">
-        <!-- <button class="btn"></button>
-        <button class="btn">Answer 2</button>
-        <button class="btn">Answer 3</button>
-        <button class="btn">Answer 4</button> -->
-      </div>
-    <button id="next-ques-button" class="start-button" onclick="gotoNext()">Next</button>
-   <!-- <br> <button id="next_button" class="start-button">Next</button> -->
-</form>
+        <div class="Marks">
+          <h2 id="showScore"></h2>
+        </div>
+        <br />
+        <button id="end_button" class="start-button">End</button>
+      </form>
+    </div>
 
-<form id="EndForm" style="display: none;">
-    <h1>Quiz App</h1>
-<br>
-<h2>Total Marks:5</h2><br>
-
-<div class="Marks">
-<h2 id="showScore"></h2></div><br>
-<button id="end_button" class="start-button">End</button>
-</form>
-</div>
-
-
-<script src="quiz.js"></script>
-</body>
+    <script src="quiz.js"></script>
+  </body>
 </html>
