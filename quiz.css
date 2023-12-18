@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('images/image2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.wrapper {
+    width: 720px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.4);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 30px 40px;
+    overflow: hidden;
+}
+h1{
+    color: white;
+    font-size: 50px;
+}
+#StartForm, #QuizForm, #EndForm{
+    text-align: center;
+}
+#start_button, #end_button ,#next-ques-button{
+   width:90px;
+   height:40px;
+   background:#05050f; 
+   border-radius: 5px;
+   /* box-shadow: 0 0 10px rgba(0,0,0, .1); */
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+#start_button:hover, #end_button:hover, #next-ques-button:hover{
+    background-color: #8a0404;
+}
+.btn{
+    display: inline;
+    width:625px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 25px;
+    font-size: 22px;
+    text-align:left;
+    background-color: transparent;
+    color:rgb(209, 199, 199);
+    padding: 15px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: rgba(9, 7, 17, 0.301);
+}
+.btn.selected {
+    background-color: #101110;
+    color: white;
+}
+/* ....... */
+p{
+    color: rgb(209, 199, 199);
+    font-size: 22px;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* .option {
+    font-size: 22px;
+    text-align:left;
+    color:rgb(209, 199, 199);
+    border: 2px solid #8a0404;
+    border-radius: 25px;
+    padding: 15px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+} */
+/* .option:hover{
+    background-color: rgba(9, 7, 17, 0.301);
+} */
+/* .... */
+h2{
+    font-size: 30px;
+    color: #8a0404;
+}
+
+.correct{
+    background: green;
+}
+.incorrect{
+    background: black;
+}
+
+
+.displayNone {
+    display: none;
+  }
+  .displayShow {
+    display: inline;
+  }
+.displayNoneForm{
+    display: none !important;
+}
+.displayShowForm{
+    display: block !important;
+}
