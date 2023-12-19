@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <form id="StartForm">
+      <div id="StartForm">
         <h1>Quiz App</h1>
         <br />
         <button
@@ -19,20 +19,19 @@
         >
           START
         </button>
-      </form>
+      </div>
 
-      <form id="QuizForm" style="display: none">
+      <div id="QuizForm" style="display: none">
         <h1>Questions</h1>
         <br />
         <p id="questions"></p>
         <br />
 
-        <div id="answer-btn" onclick="selectAnswer()">
-        </div>
+        <div id="answer-btn" onclick="selectAnswer()"></div>
         <button id="next-ques-button" class="start-button" onclick="gotoNext()">
           Next
         </button>
-      </form>
+      </div>
 
       <form id="EndForm" style="display: none">
         <h1>Quiz App</h1>
@@ -47,7 +46,7 @@
         <button id="end_button" class="start-button">End</button>
       </form>
     </div>
-
-    <script src="quiz.js"></script>
+    <script src="quizdata.js"></script>
+    <script src="quiz2.js"></script>
   </body>
 </html>

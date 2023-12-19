@@ -19,92 +19,20 @@ startbutton.addEventListener("click", function (e) {
 });
 
 //..................................................................................................................
-const Questions = [
-  {
-    id: 1,
-    question: "Q1:Which keyword is used to declare variables in JavaScript?",
-    answers: [
-      { text: "Var", correct: false, id: 11 },
-      { text: "Let", correct: false, id: 12 },
-      { text: "Const", correct: false, id: 13 },
-      { text: "All of the above", correct: true, id: 14 },
-    ],
-  },
-  {
-    id: 2,
-    question: "Q2:What does the DOM stand for in JavaScript?",
-    answers: [
-      { text: "Document Object Model", correct: true, id: 15 },
-      { text: "Data Object Mode", correct: false, id: 16 },
-      { text: "Document Order Module", correct: false, id: 17 },
-      { text: "Dynamic Output Mechanism", correct: false, id: 18 },
-    ],
-  },
-  {
-    id: 3,
-    question: "Q3:What is the purpose of the typeof operator in JavaScript?",
-    answers: [
-      { text: "To check if a variable is defined", correct: false, id: 19 },
-      { text: "To determine the type of a variable", correct: true, id: 20 },
-      { text: "To compare two variables", correct: false, id: 21 },
-      { text: "To assign a value to a variable", correct: false, id: 22 },
-    ],
-  },
-  {
-    id: 4,
-    question:
-      "Q4:Which of the following is not a valid way to comment in JavaScript?",
-    answers: [
-      { text: "// This is a comment", correct: false, id: 23 },
-      { text: "/* This is a comment */", correct: false, id: 24 },
-      { text: "..This is a comment..", correct: true, id: 25 },
-      { text: "/ This is a multiline comment */", correct: false, id: 26 },
-    ],
-  },
-  {
-    id: 5,
-    question: "Q5:What does the === operator in JavaScript do?",
-    answers: [
-      { text: "Assigns a value to a variable", correct: false, id: 27 },
-      {
-        text: "Compares values for equality without type coercion",
-        correct: false,
-        id: 28,
-      },
-      {
-        text: "Compares values for equality with type coercion",
-        correct: true,
-        id: 29,
-      },
-      {
-        text: "Checks if a variable is undefined or null",
-        correct: false,
-        id: 30,
-      },
-    ],
-  },
-];
+let index=0;
+let foundQuestion= Questions[index];
 const ques = document.getElementById("questions");
 const next = document.getElementById("next-ques-button");
-
-let questionIdToFind = 1;
 let score = 0;
 let count;
 
-let foundQuestion = Questions.find(
-  (question) => question.id === questionIdToFind
-);
-
 function gotoNext() {
-  questionIdToFind++;
-  if (isCorrect) {
+    index++;  
+   if (isCorrect) {
     score++;
-    //console.log(score);
   }
-  if (questionIdToFind <= Questions.length) {
-    foundQuestion = Questions.find(
-      (question) => question.id === questionIdToFind
-    );
+  if (index < Questions.length) {
+    foundQuestion = Questions[index];
     showQuestion();
   } else {
     endForm.classList.add("displayShow");
@@ -131,6 +59,7 @@ function showQuestion() {
     button.classList.add("btn");
     button.id = answer.id + "";
     ans.appendChild(button);
+    // console.log(index);
   });
 }
 let selectedButton;
@@ -146,7 +75,7 @@ function selectAnswer() {
   isCorrect = foundQuestion.answers.find((answer) => {
     return answer.id + "" === selectedButton.id;
   }).correct;
-  // console.log(selectedButton.id);
+   console.log(selectedButton.id);
   count = true;
   if (count == true) {
     next.classList.add("displayShow");
