@@ -1,6 +1,6 @@
 const Questions = [
     {
-      //id: 1,
+      id: 1,
       question: "Q1:Which keyword is used to declare variables in JavaScript?",
       answers: [
         { text: "Var", correct: false, id: 'a' },
@@ -10,7 +10,7 @@ const Questions = [
       ],
     },
     {
-      //id: 2,
+      id: 2,
       question: "Q2:What does the DOM stand for in JavaScript?",
       answers: [
         { text: "Document Object Model", correct: true, id: 'e' },
@@ -20,7 +20,7 @@ const Questions = [
       ],
     },
     {
-      //id: 3,
+      id: 3,
       question: "Q3:What is the purpose of the typeof operator in JavaScript?",
       answers: [
         { text: "To check if a variable is defined", correct: false, id: 19 },
@@ -30,7 +30,7 @@ const Questions = [
       ],
     },
     {
-     // id: 4,
+      id: 4,
       question:
         "Q4:Which of the following is not a valid way to comment in JavaScript?",
       answers: [
@@ -41,7 +41,7 @@ const Questions = [
       ],
     },
     {
-      //id: 5,
+      id: 5,
       question: "Q5:What does the === operator in JavaScript do?",
       answers: [
         { text: "Assigns a value to a variable", correct: false, id: 27 },

@@ -38,7 +38,6 @@ h1 {
   height: 40px;
   background: #05050f;
   border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0,0,0, .1); */
   cursor: pointer;
   font-size: 25px;
   color: white;
@@ -71,7 +70,6 @@ h1 {
   background-color: #101110;
   color: white;
 }
-/* ....... */
 p {
   color: rgb(209, 199, 199);
   font-size: 22px;
@@ -79,20 +77,6 @@ p {
   margin-left: 20px;
   margin-right: 20px;
 }
-/* .option {
-    font-size: 22px;
-    text-align:left;
-    color:rgb(209, 199, 199);
-    border: 2px solid #8a0404;
-    border-radius: 25px;
-    padding: 15px;
-    padding-left: 20px;
-    margin-bottom: 10px;
-} */
-/* .option:hover{
-    background-color: rgba(9, 7, 17, 0.301);
-} */
-/* .... */
 h2 {
   font-size: 30px;
   color: #8a0404;
