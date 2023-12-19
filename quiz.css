@@ -22,6 +22,17 @@ body {
   padding: 30px 40px;
   overflow: hidden;
 }
+#timer{
+  width: 100px;
+  border: 2px solid red;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  margin-left: 525px;
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
 h1 {
   color: white;
   font-size: 50px;

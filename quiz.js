@@ -4,16 +4,15 @@ const ans = document.getElementById("answer-btn");
 const startForm = document.getElementById("StartForm");
 const quizForm = document.getElementById("QuizForm");
 const endForm = document.getElementById("EndForm");
-
 startbutton.addEventListener("click", function (e) {
   e.preventDefault();
+  updateCountdown();
   startForm.classList.add("displayNoneForm");
   quizForm.classList.add("displayShowForm");
   quizForm.classList.replace("displayNoneForm", "displayShowForm");
   endForm.classList.add("displayNoneForm");
   endForm.classList.replace("displayShowForm", "displayNoneForm");
 });
-
 let index = 0;
 let foundQuestion = Questions[0];
 const ques = document.getElementById("questions");
@@ -77,3 +76,19 @@ function selectAnswer() {
     next.classList.replace("displayNone", "displayShow");
   }
 }
+
+let countdown = 15;
+function updateCountdown() {
+    const showTime = document.getElementById("timer");
+    showTime.textContent = `Time: ${countdown}`;
+  countdown--;
+  if (countdown < 0) {
+    quizForm.classList.replace("displayShowForm", "displayNoneForm");
+    endForm.classList.replace("displayNoneForm", "displayShowForm");
+    const showScore = document.getElementById("showScore");
+    showScore.textContent = `Obtained Marks: ${score}`;
+  } else {
+    setTimeout(updateCountdown, 1000);
+  }
+}
+

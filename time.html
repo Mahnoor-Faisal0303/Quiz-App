@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+</head>
+<body>
+
+<div id="timer">30</div>
+
+<script>
+  // Set the initial countdown value
+  let countdown = 5;
+
+  // Function to update the countdown and display it
+  function updateCountdown() {
+    document.getElementById('timer').innerHTML = countdown;
+    countdown--;
+
+    // Check if the countdown has reached zero
+    if (countdown < 0) {
+      // Perform any action you want when the countdown reaches zero
+      alert('Countdown reached zero!');
+    } else {
+      // Call the updateCountdown function again after 1 second
+      setTimeout(updateCountdown, 1000);
+    }
+  }
+  // Call the updateCountdown function to start the countdown
+  updateCountdown();
+</script>
+
+</body>
+</html>
