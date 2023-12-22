@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
     <link rel="stylesheet" href="quiz.css" />
   </head>
   <body>
@@ -14,7 +21,7 @@
         <button
           id="start_button"
           type="submit"
-          class="start-button"
+          class="btn-floating pulse"
           onclick="showQuestion()"
         >
           START
@@ -29,7 +36,7 @@
         <br />
 
         <div id="answer-btn" onclick="selectAnswer()"></div>
-        <button id="next-ques-button" class="start-button" onclick="gotoNext()">
+        <button id="next-ques-button" class="waves-effect waves-light" onclick="gotoNext()">
           Next
         </button>
       </div>
@@ -38,13 +45,12 @@
         <h1>Quiz App</h1>
         <br />
         <h2>Total Marks:5</h2>
-        <br />
 
         <div class="Marks">
           <h2 id="showScore"></h2>
         </div>
         <br />
-        <button id="end_button" class="start-button">End</button>
+        <button id="end_button" class="waves-effect waves-light">End</button>
       </form>
     </div>
     <script src="quizdata.js"></script>

@@ -12,6 +12,7 @@ body {
   background: url("images/image2.jpg");
   background-size: cover;
   background-position: center;
+  font-family: "Poppins", sans-serif;
 }
 .wrapper {
   width: 720px;
@@ -19,12 +20,12 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
   border-radius: 10px;
-  padding: 30px 40px;
+  padding: 30px 40px !important;
   overflow: hidden;
 }
 #timer{
   width: 100px;
-  border: 2px solid red;
+  border: 2px solid #9fa8da;
   border-radius: 5px;
   background-color: black;
   color: white;
@@ -36,6 +37,7 @@ body {
 h1 {
   color: white;
   font-size: 50px;
+  font-weight: bold;
 }
 #StartForm,
 #QuizForm,
@@ -57,22 +59,25 @@ h1 {
 #start_button:hover,
 #end_button:hover,
 #next-ques-button:hover {
-  background-color: #8a0404;
+  background-color: #9fa8da;
+  color: #05050f;
+  font-weight: bold;
 }
 .btn {
-  display: inline;
+  display: inline ;
   width: 625px;
-  height: 50px;
-  border: 2px solid red;
+  height: 50px ;
+  border: 2px solid #9fa8da ;
   border-radius: 25px;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: left;
   background-color: transparent;
   color: rgb(209, 199, 199);
-  padding: 15px;
-  padding-bottom: 40px;
-  padding-left: 20px;
-  margin-bottom: 10px;
+  padding: 15px !important;
+  padding-bottom: 40px !important;
+  padding-left: 20px !important;
+  margin-bottom: 10px !important;
 }
 .btn:hover {
   background-color: rgba(9, 7, 17, 0.301);
@@ -84,13 +89,15 @@ h1 {
 p {
   color: rgb(209, 199, 199);
   font-size: 22px;
+  font-weight: bold;
   text-align: justify;
   margin-left: 20px;
   margin-right: 20px;
 }
 h2 {
   font-size: 30px;
-  color: #8a0404;
+  font-weight: bold;
+  color: #9fa8da;
 }
 
 .correct {
@@ -108,3 +115,65 @@ h2 {
 .displayShowForm {
   display: block !important;
 }
+ @media only screen and (min-width: 900px) {
+  h1 {
+      font-size: 50px; 
+   }
+}
+
+@media only screen and (max-width: 300px) {
+  h1 {
+    text-align: center;
+      font-size: 25px; 
+   padding: 0;
+    }
+  .wrapper {
+      width: 720px;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(20px);
+      border-radius: 10px;
+      padding:0;
+      overflow: hidden;
+    }  
+    p {
+      color: rgb(209, 199, 199);
+      font-size: 12px;
+      text-align: center;
+      margin:0px;
+    }
+    .btn {
+      width: 200px;
+      height: 50px;
+      border: 2px solid red;
+      font-size: 12px;
+    }
+    #timer{
+      width: 20px;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .btn {
+      width: 250px;
+    }
+    #timer{
+      width: 50px;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+  @media only screen and (max-height: 400px) {
+    .btn {
+      width: 200px;
+      height: 15px;
+      border: 2px solid red;
+      font-size: 8px;
+      padding: 0px;
+      margin-bottom: 0px;
+    } }

@@ -79,8 +79,8 @@ function selectAnswer() {
 
 let countdown = 15;
 function updateCountdown() {
-    const showTime = document.getElementById("timer");
-    showTime.textContent = `Time: ${countdown}`;
+  const showTime = document.getElementById("timer");
+  showTime.textContent = `Time: ${countdown}`;
   countdown--;
   if (countdown < 0) {
     quizForm.classList.replace("displayShowForm", "displayNoneForm");
@@ -91,4 +91,3 @@ function updateCountdown() {
     setTimeout(updateCountdown, 1000);
   }
 }
-
