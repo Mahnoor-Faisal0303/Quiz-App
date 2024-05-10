@@ -23,7 +23,7 @@ body {
   padding: 30px 40px !important;
   overflow: hidden;
 }
-#timer{
+#timer {
   width: 100px;
   border: 2px solid #9fa8da;
   border-radius: 5px;
@@ -64,10 +64,10 @@ h1 {
   font-weight: bold;
 }
 .btn {
-  display: inline ;
+  display: inline;
   width: 625px;
-  height: 50px ;
-  border: 2px solid #9fa8da ;
+  height: 50px;
+  border: 2px solid #9fa8da;
   border-radius: 25px;
   font-size: 18px;
   font-weight: bold;
@@ -115,65 +115,66 @@ h2 {
 .displayShowForm {
   display: block !important;
 }
- @media only screen and (min-width: 900px) {
+@media only screen and (min-width: 900px) {
   h1 {
-      font-size: 50px; 
-   }
+    font-size: 50px;
+  }
 }
 
 @media only screen and (max-width: 300px) {
   h1 {
     text-align: center;
-      font-size: 25px; 
-   padding: 0;
-    }
+    font-size: 25px;
+    padding: 0;
+  }
   .wrapper {
-      width: 720px;
-      background: transparent;
-      border: 2px solid rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(20px);
-      border-radius: 10px;
-      padding:0;
-      overflow: hidden;
-    }  
-    p {
-      color: rgb(209, 199, 199);
-      font-size: 12px;
-      text-align: center;
-      margin:0px;
-    }
-    .btn {
-      width: 200px;
-      height: 50px;
-      border: 2px solid red;
-      font-size: 12px;
-    }
-    #timer{
-      width: 20px;
-      font-size: 10px;
-      display: flex;
-      justify-content: center;
-    }
+    width: 720px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 0;
+    overflow: hidden;
   }
-  @media only screen and (max-width: 600px) {
-    .btn {
-      width: 250px;
-    }
-    #timer{
-      width: 50px;
-      font-size: 10px;
-      display: flex;
-      justify-content: center;
-      margin: 0px;
-      padding: 0px;
-    }
+  p {
+    color: rgb(209, 199, 199);
+    font-size: 12px;
+    text-align: center;
+    margin: 0px;
   }
-  @media only screen and (max-height: 400px) {
-    .btn {
-      width: 200px;
-      height: 15px;
-      border: 2px solid red;
-      font-size: 8px;
-      padding: 0px;
-      margin-bottom: 0px;
-    } }
+  .btn {
+    width: 200px;
+    height: 50px;
+    border: 2px solid red;
+    font-size: 12px;
+  }
+  #timer {
+    width: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .btn {
+    width: 250px;
+  }
+  #timer {
+    width: 50px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+@media only screen and (max-height: 400px) {
+  .btn {
+    width: 200px;
+    height: 15px;
+    border: 2px solid red;
+    font-size: 8px;
+    padding: 0px;
+    margin-bottom: 0px;
+  }
+}
